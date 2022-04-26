@@ -1,0 +1,31 @@
+version: "3"
+
+services:
+  mjpg-streamer:
+    build:
+      context: ./mjpg-streamer
+      dockerfile: Dockerfile
+    restart: always
+    privileged: true
+    ports:
+      - 8080:8080
+    environment:
+      - INPUT_FLAGS=-r 1920x1080 -f 30
+      - OUTPUT_FLAGS=-w ./www
+    volumes:
+      - /run/udev:/run/udev:ro
+
+  octoprint:
+    image: octoprint/octoprint:latest
+    restart: always
+    privileged: true
+    ports:
+      - 80:80
+    devices:
+      - /dev/ttyACM0:/dev/ttyACM0
+    volumes:
+      - ./data/octoprint:/octoprint
+      - /proc/cpuinfo:/proc/cpuinfo:ro
+      - /usr/bin/vcgencmd:/usr/bin/vcgencmd:ro
+      - /usr/lib/aarch64-linux-gnu/libvcos.so.0:/usr/lib/aarch64-linux-gnu/libvcos.so.0:ro
+      - /usr/lib/aarch64-linux-gnu/libvchiq_arm.so.0:/usr/lib/aarch64-linux-gnu/libvchiq_arm.so.0:ro
