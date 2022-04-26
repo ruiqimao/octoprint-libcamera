@@ -1,6 +1,6 @@
 # octoprint-libcamera
 
-This repository is a demonstration of how I was able to use a libcamera Raspberry Pi camera ([https://www.arducam.com/16mp-autofocus-camera-for-raspberry-pi/](ArduCam 16MP Autofocus Camera)) with OctoPrint.
+This repository is a demonstration of how I was able to use a libcamera Raspberry Pi camera ((https://www.arducam.com/16mp-autofocus-camera-for-raspberry-pi/)[ArduCam 16MP Autofocus Camera]) with OctoPrint.
 
 ## Why Not Official Instructions?
 
