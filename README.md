@@ -44,5 +44,5 @@ I used the official OctoPrint image here. Things to note:
 * I mounted a couple of other volumes to get the NavbarTemp plugin to recognize and read the Pi's SoC temperature.
   * `/proc/cpuinfo:/proc/cpuinfo:ro`
   * `/usr/bin/vcgencmd:/usr/bin/vcgencmd:ro`
-  * `/usr/lib/aarch64-linux-gnu/libvcos.so.0:/usr/lib/aarch64-linux-gnu/libvcos.so.0:ro
+  * `/usr/lib/aarch64-linux-gnu/libvcos.so.0:/usr/lib/aarch64-linux-gnu/libvcos.so.0:ro`
   * `/usr/lib/aarch64-linux-gnu/libvchiq_arm.so.0:/usr/lib/aarch64-linux-gnu/libvchiq_arm.so.0:ro`
