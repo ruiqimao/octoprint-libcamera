@@ -23,6 +23,7 @@ services:
       - 80:80
     devices:
       - /dev/ttyACM0:/dev/ttyACM0
+      - /dev/ttyUSB0:/dev/ttyUSB0
     volumes:
       - ./data/octoprint:/octoprint
       - /proc/cpuinfo:/proc/cpuinfo:ro
